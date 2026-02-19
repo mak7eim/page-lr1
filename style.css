@@ -1,0 +1,357 @@
+/* Базовые сбросы и переменные */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Плавный скролл по якорям */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Типография */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+}
+
+/* Шапка */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #4a4a4a;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav__link:hover {
+    color: #667eea;
+}
+
+/* Главный экран */
+.hero {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #f9faff 0%, #ffffff 100%);
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero__content {
+    flex: 1;
+}
+
+.hero__title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #667eea;
+    margin-bottom: 1.5rem;
+}
+
+.hero__description {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    max-width: 500px;
+    margin-bottom: 2rem;
+}
+
+.hero__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Интересная органическая форма */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 25px 40px -10px rgba(102, 126, 234, 0.3);
+}
+
+.image-placeholder span {
+    font-size: 6rem;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn--primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+}
+
+/* Секция "Обо мне" */
+.about {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.about__content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #4a4a4a;
+}
+
+.about__content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Секция "Портфолио" */
+.portfolio {
+    padding: 100px 0;
+    background-color: #f9faff;
+}
+
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio__item {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.portfolio__item:hover {
+    transform: scale(1.02);
+}
+
+.portfolio__image {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: #f0f0f0;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio__item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.portfolio__item p {
+    color: #666;
+}
+
+/* Секция "Контакты" */
+.contacts {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.contacts .section-title {
+    color: white;
+}
+
+.contacts__content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contacts__content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.contacts__links {
+    margin-bottom: 2rem;
+}
+
+.contact-link {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem 1rem 1rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.contact-link:hover {
+    border-bottom-color: white;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50px;
+    transition: background 0.2s;
+}
+
+.social-link:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: white;
+}
+
+/* Подвал */
+.footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    padding: 30px 0;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Адаптивность (мобильные устройства) */
+@media (max-width: 768px) {
+    .hero__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .hero__description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header__container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        gap: 10px;
+    }
+
+    .nav__list {
+        gap: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .contact-link {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav__list {
+        gap: 1rem;
+    }
+
+    .nav__link {
+        font-size: 0.9rem;
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+}
